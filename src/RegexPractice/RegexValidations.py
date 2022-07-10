@@ -8,7 +8,7 @@ class RegexValidations:
         self.phonePatterns.append(r'\d{2}?\s?(\d{1})?\s?(\d{4})-?(\d{4})')
         self.phonePatterns.append(r'(\(?\d{2}\)?)\s?(\d{1})?\s?(\d{4})-?(\d{4})')
         self.phonePatterns.append(r'(\+?\d{2})?\s?(\(?\d{2}\)?)\s?(\d{1})?\s?(\d{4})-?(\d{4})')
-        self.emailPatterns.append(r'[A-Za-z0-9.!#$%&*+/=?^_]+@[a-z]+.[a-z]+')
+        self.emailPatterns.append(r'([A-Za-z0-9.!#$%&*+/=?^_]+)@([a-z]+).([a-z]+)')
 
     def matchPhone(self, word: str) -> bool:
         for pattern in self.phonePatterns:
