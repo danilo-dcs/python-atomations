@@ -40,5 +40,9 @@ class FilesManager:
     def deleteFolderShutil(path: str) -> None:
         shutil.rmtree(path)  # removes a folder recursivelly with all its ocntent
 
+    def dirTree(path: str) -> None:
+        tree = os.walk(path)
+        return tree.folderName, tree.subfolders, tree.filenames
+
 ## To send files to trash instead of deleting them permanenty, check out the library send2trash. 
 # Install it with pip3
